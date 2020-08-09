@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import Info from './Info';
 
-describe('App', () => {
+describe('Info', () => {
   it('renders without crashing', () => {
-    shallow(<App />);
+    shallow(<Info />);
   });
 });
