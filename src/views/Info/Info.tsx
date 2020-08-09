@@ -8,6 +8,7 @@ import {
 import Page from '../../components/Page/Page';
 import Display from '../../components/Display/Display';
 import CoolButton from '../../components/CoolButton/CoolButton';
+import Card from '../../components/Card/Card';
 
 const Info: React.FC = () => {
   const state = useSelector(
@@ -25,6 +26,8 @@ const Info: React.FC = () => {
 
       dispatch(setBitcoinData(Object.values(data.bpi)));
       dispatch(setBitcoinTime(data.time.updated));
+      // this application has no intention of being used in production
+      // let's have some consoles on the master branch
       console.log(state);
     } catch (e) {
       alert(e);
@@ -38,12 +41,18 @@ const Info: React.FC = () => {
 
   return (
     <Page backgroundURL="https://wallpaperaccess.com/full/2454628.png">
-      <Display vert height={30} fontsize={4}>
-        {state.bitcoinData.map((el) => (
-          <div key={el.code}>{el.code}</div>
-        ))}
-        <div>{state.bitcoinTime}</div>
+      <Display vert>
+        <Display>
+          {state.bitcoinData?.map((el) => (
+            <Card key={el.code} fontsize={3} size={2}>
+              <div>{el.code}</div>
+              <div> {el.rate_float}</div>
+            </Card>
+          ))}
+        </Display>
+        <div>{state.bitcoinTime} - Updated Hourly</div>
       </Display>
+
       <CoolButton size={2} onClick={loadBitcoin}>
         Update
       </CoolButton>

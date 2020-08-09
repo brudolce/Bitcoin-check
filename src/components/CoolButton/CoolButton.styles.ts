@@ -25,7 +25,7 @@ export default class CoolButtonStyles extends AppStyles {
     };
   }
 
-  // TS does not alow me to override parent methods
+  // TS does not allow me to override parent methods
   static CoolButtonCSSFactory(size: number): CoolButtonStyles {
     return new CoolButtonStyles(size);
   }

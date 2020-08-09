@@ -3,12 +3,12 @@ import PageStyles from './Page.styles';
 
 interface PageProps {
   children: any;
-  backgroundURL: string;
+  backgroundURL?: string;
 }
 
 const Display: React.FC<PageProps> = ({
   children,
-  backgroundURL,
+  backgroundURL = '',
 }: PageProps) => {
   const CSS = PageStyles.PageCSSFactory(backgroundURL);
 

@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 import React from 'react';
 import { shallow } from 'enzyme';
-import Page from './Page';
+import Card from './Card';
 
-describe('Display', () => {
+describe('Card', () => {
   it('renders without crashing', () => {
-    shallow(<Page>test</Page>);
+    shallow(<Card>test</Card>);
   });
 });

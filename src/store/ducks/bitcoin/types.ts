@@ -1,6 +1,6 @@
 export enum Bitcointypes {
-  bitcoinData = '@bitcoinData',
-  bitcoinTime = '@bitcoinTime',
+  setbitcoinData = '@setbitcoinData',
+  setbitcoinTime = '@setbitcoinTime',
 }
 
 export interface BitcoinState {

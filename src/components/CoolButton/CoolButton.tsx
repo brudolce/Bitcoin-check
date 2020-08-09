@@ -4,7 +4,7 @@ import CoolButtonStyles from './CoolButton.styles';
 interface CoolButtonProps {
   children: any;
   onClick: () => void;
-  size: number;
+  size?: number;
 }
 
 const CoolButton: React.FC<CoolButtonProps> = ({

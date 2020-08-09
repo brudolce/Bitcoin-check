@@ -5,7 +5,7 @@ export default class PageStyles extends AppStyles {
     backgroundImage: string;
     backgrounRepeat: string;
     backgroundSize: string;
-    height: string;
+    minHeight: string;
     width: string;
   };
 
@@ -16,7 +16,7 @@ export default class PageStyles extends AppStyles {
       backgroundImage: `url(${backgroundURL})`,
       backgrounRepeat: 'no-repeat',
       backgroundSize: 'auto',
-      height: '100vh',
+      minHeight: '100vh',
       width: '100vw',
     };
   }

@@ -3,7 +3,7 @@ import { action } from 'typesafe-actions';
 import { Bitcointypes } from './types';
 
 export const setBitcoinData = (payload: Array<any>) =>
-  action(Bitcointypes.bitcoinData, payload);
+  action(Bitcointypes.setbitcoinData, payload);
 
 export const setBitcoinTime = (payload: string) =>
-  action(Bitcointypes.bitcoinTime, payload);
+  action(Bitcointypes.setbitcoinTime, payload);

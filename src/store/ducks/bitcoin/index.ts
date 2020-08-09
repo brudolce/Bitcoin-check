@@ -7,9 +7,9 @@ const reducer: Reducer<BitcoinState> = (
   { type, payload }
 ) => {
   switch (type) {
-    case Bitcointypes.bitcoinData:
+    case Bitcointypes.setbitcoinData:
       return { ...state, bitcoinData: payload };
-    case Bitcointypes.bitcoinTime:
+    case Bitcointypes.setbitcoinTime:
       return { ...state, bitcoinTime: payload };
     default:
       return state;

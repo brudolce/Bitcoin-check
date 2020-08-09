@@ -3,18 +3,16 @@ import DisplayStyles from './Display.styles';
 
 interface DisplayProps {
   children: any;
-  height: number;
-  fontsize: number;
+
   vert?: boolean;
 }
 
 const Display: React.FC<DisplayProps> = ({
   children,
-  height = 100,
-  fontsize = 4,
-  vert,
+
+  vert = false,
 }: DisplayProps) => {
-  const CSS = DisplayStyles.DisplayCSSFactory(height, fontsize);
+  const CSS = DisplayStyles.DisplayCSSFactory();
   const baseCSS = { ...CSS.Display, ...CSS.container };
 
   return (

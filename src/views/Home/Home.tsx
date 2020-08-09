@@ -11,11 +11,11 @@ const Home: React.FC = () => {
 
   return (
     <Page backgroundURL="https://wallpaperaccess.com/full/2454628.png">
-      <Display height={30} fontsize={4}>
+      <Display>
         Test Application to talk about some vulgar display of Typescript
       </Display>
       <CoolButton onClick={changePage} size={2}>
-        Bitcoin Check
+        Bitcoin Value Check
       </CoolButton>
     </Page>
   );
